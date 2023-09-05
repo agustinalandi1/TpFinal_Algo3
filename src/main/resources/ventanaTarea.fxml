@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="314.0" text="Tarea" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tituloTarea" prefHeight="32.0" prefWidth="314.0" text="Titulo">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="descripcionTarea" prefHeight="56.0" prefWidth="245.0" text="Descripcion">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextArea>
+      <HBox prefHeight="51.0" prefWidth="314.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="317.0">
+               <children>
+                  <DatePicker fx:id="fechaTarea" layoutX="2.0" layoutY="25.0" prefHeight="25.0" prefWidth="131.0" />
+                  <Label layoutX="3.0" layoutY="-3.0" prefHeight="35.0" prefWidth="125.0" text=" Fecha">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label prefHeight="32.0" prefWidth="79.0" text=" Horario">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="29.0" prefWidth="314.0">
+         <children>
+            <RadioButton fx:id="tareaDiaCompleto" mnemonicParsing="false" prefHeight="29.0" prefWidth="131.0" text="Tarea Dia Completo">
+               <toggleGroup>
+                  <ToggleGroup fx:id="duracionTarea" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="seleccionarHoraVencimiento" mnemonicParsing="false" prefHeight="29.0" prefWidth="185.0" text="Seleccionar Hora Vencimiento" toggleGroup="$duracionTarea" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="111.0" prefWidth="314.0">
+         <children>
+            <Button fx:id="saveNewTaskButton" layoutX="1.0" layoutY="57.0" mnemonicParsing="false" text="Guardar Cambios" />
+            <Label fx:id="mensajeCambiosGuardados" layoutX="3.0" layoutY="82.0" prefHeight="30.0" prefWidth="184.0" text="Se han guardado los cambios!" textFill="#26bc00">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="eliminarTareaButton" layoutX="119.0" layoutY="57.0" mnemonicParsing="false" text="Eliminar Tarea" />
+            <Button fx:id="nuevaAlarmaTarea" layoutX="79.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Agregar Alarma" />
+            <Label layoutX="4.0" layoutY="17.0" prefHeight="17.0" prefWidth="79.0" text="(Opcional) :" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
